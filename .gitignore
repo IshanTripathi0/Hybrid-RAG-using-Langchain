@@ -1,6 +1,6 @@
 .env
 .venv/
 chroma_imdb_db/
-.ipnyb_checkpoints/
+.ipynb_checkpoints/
 __pycache__/
 split_docs.pkl
