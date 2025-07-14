@@ -15,5 +15,22 @@ The repo has three files:
 - After cloning the repository, install the requirements:
   ```bash
   pip install -r requirements.txt
-```
--
+  ```
+- Open the build_store.py file to load your desired dataset from HuggingFace. Here I used the imdb movie review dataset from stanfordnlp but you can use some other, just make sure to load the correct path and content column.
+  ```python
+  loader = HuggingFaceDatasetLoader(
+        path="imdb", #Replace the path with your own dataset (multiple datasets can also be used)
+        page_content_column="text" #Choose the content column you want from the dataset
+    )
+  ```
+  *Note: The Hybrid RAG like this one with BM25 retriever is best for datasets where the exact keyword is required (eg. Legal or Medical scenarios).*
+  
+- After selecting the dataset save and execute the file.
+  ```bash
+  python3.10 build_store.py
+  ```
+- Your vector store will be created at the specified storage path after a few minutes. Once that's done, you can run main.py to launch the Gradio app on localhost.
+  ```bash
+  python3.10 main.py
+  ```
+  
