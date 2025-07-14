@@ -6,3 +6,4 @@ rank_bm25
 langchain-huggingface
 langchain_community
 langchain-chroma
+gradio
