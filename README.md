@@ -16,6 +16,22 @@ The repo has three files:
   ```bash
   pip install -r requirements.txt
   ```
+- You also need an API key to use a LLM. Here I used GroqAPI which is gives a lot of free usgae for a huge collection of their hosted LLMs, I recommend to us that if you don't already have it from
+  [Groq](https://console.groq.com/keys) and create your key. After creatingg you key save it in a .env file like this:
+  ```bash
+  GROQ_API_KEY = "your_api_key"
+  ```
+  and now you can load it using dotenv like this:
+  ```bash
+  pip install python-dotenv
+  ```
+  ```python
+  import os
+  from dotenv import load_dotenv
+  load_dotenv()
+
+  groq_api_key= os.getenv("GROQ_API_KEY")
+  ```
 - Open the build_store.py file to load your desired dataset from HuggingFace. Here I used the imdb movie review dataset from stanfordnlp but you can use some other, just make sure to load the correct path and content column.
   ```python
   loader = HuggingFaceDatasetLoader(
