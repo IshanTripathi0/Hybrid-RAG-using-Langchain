@@ -16,8 +16,8 @@ The repo has three files:
   ```bash
   pip install -r requirements.txt
   ```
-- You also need an API key to use a LLM. Here I used GroqAPI which is gives a lot of free usgae for a huge collection of their hosted LLMs, I recommend to us that if you don't already have it from
-  [Groq](https://console.groq.com/keys) and create your key. After creatingg you key save it in a .env file like this:
+- You also need an API key to use a LLM. Here I used GroqAPI which is gives a lot of free usgae for a huge collection of their hosted LLMs, I recommend to use that if you don't already have it from
+  [Groq](https://console.groq.com/keys). After creating you key save it in a .env file like this:
   ```bash
   GROQ_API_KEY = "your_api_key"
   ```
